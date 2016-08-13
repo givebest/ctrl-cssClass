@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>url Dateformat unit tests</title>
+    <link href="../lib/qunit/qunit.css" rel="stylesheet">
+    <style>
+      #wrapper{
+        padding: 30px;
+      }
+      .bg-blue{
+        color: #fff;
+        background-color: blue;
+      }
+      .bg-red{
+        color: #fff;
+        background-color: red;
+      }
+      .fs12{
+        font-size: 12px;
+      }
+      .fs20{
+        font-size: 20px;
+      }
+    </style>
+    <script src="../lib/qunit/qunit.js"></script>
+    <script src="../src/js/Ctrl-cssClass-compatible.js"></script>
+  </head>
+  <body>
+    
+  <h1 id="qunit-header">ctrl cssClass unit tests</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture"></div>
+
+  
+  <div id="wrapper" class="fs12 bg-blue c1 c2 c3">
+    <h1>Test</h1>
+  </div>
+
+
+<script>
+  (function(){
+
+    var ele = document.getElementById('wrapper');
+
+
+    test("hasClass", function() {
+      deepEqual(ctrlCssClass.hasClass(ele, 'bg-blue'), true);
+      deepEqual(ctrlCssClass.hasClass(ele, 'fs12'), true);
+    });
+
+
+    setTimeout(function(){
+      test("addClass", function() {
+        deepEqual(ctrlCssClass.addClass(ele, 'fs20 bg-red'));
+      });
+    }, 1000);
+
+    setTimeout(function(){
+      test("removeClass", function() {
+        deepEqual(ctrlCssClass.removeClass(ele, 'fs20 bg-red'));
+      });
+    }, 2000);
+
+
+    setTimeout(function(){
+      test("toggleClass", function() {
+        deepEqual(ctrlCssClass.toggleClass(ele, 'fs20 bg-red'));
+      });
+    }, 3000);
+
+
+        setTimeout(function(){
+      test("toggleClass", function() {
+        deepEqual(ctrlCssClass.toggleClass(ele, 'fs20 bg-red'));
+      });
+    }, 4000);
+
+    
+
+
+
+  }());
+</script>
+	
+ 
+
+  
+
+  </body>
+</html>
