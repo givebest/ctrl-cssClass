@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ctrl-cssClass</title>
+    <link rel="stylesheet" href="css/typo/typo.css">
+    <style>
+    	.wrapper{
+    		padding:20px 40px;
+    	}
+    	.fork-github{
+    		position: fixed;
+    		right: -100px;
+    		top: 45px;
+    		z-index: 9999;
+    		padding: 2px 100px;
+    		font-size: 12px;
+    		background-color: #444;
+    		border: 1px solid #000;
+    		-webkit-transform: rotate(45deg);
+    			-ms-transform: rotate(45deg);
+    				transform: rotate(45deg);
+    		text-align: center;
+    	}
+    	.fork-github a{
+    		color: #fff;
+    	}
+    </style>
+  </head>
+  <body>
+    
+	
+	
+
+	<div class="wrapper typo c11 c22 c33 c44 c55" id="wrapper">
+		
+		<h1>Ctrl-cssClass.js</h1>
+
+		<h2>使用</h2>
+
+<pre>
+var ele = document.getElementById('test');           
+</pre>
+
+    <h3>hasClass</h3>
+
+<pre>
+ctrlCssClass.hasClass(ele,'c1');
+</pre>
+
+    <h3>addClass</h3>
+
+<pre>
+ctrlCssClass.addClass(ele,'c1 c2 c3');
+</pre>   
+
+    <h3>removeClass</h3>
+
+<pre>
+ctrlCssClass.removeClass(ele,'c1 c2 c3');
+</pre> 
+
+    <h3>toggleClass</h3>
+
+<pre>
+ctrlCssClass.toggleClass(ele,'c1 c2 c3');
+</pre>     
+
+
+    <h2>Demo</h2>
+        
+    <p>
+        <button id="btn-has">has</button> 
+        <button id="btn-add">add</button> 
+        <button id="btn-remove">remove</button> 
+        <button id="btn-toggle">toggle</button>   
+    </p>
+
+	</div>
+	
+	<div class="fork-github">
+		<a href="https://github.com/givebest/Ctrl-cssClass">Fork me on Github</a>
+	</div>
+	
+	<script src="js/Ctrl-cssClass-compatible.js"></script>
+    <script>
+        var ele = document.getElementById('wrapper');
+        var btnHas = document.getElementById('btn-has');
+        var btnAdd = document.getElementById('btn-add');
+        var btnRemove = document.getElementById('btn-remove');
+        var btnToggle = document.getElementById('btn-toggle');
+
+
+        document.onclick = function(e) {
+            // https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+            e = e || window.event;
+            var thisEle = e.srcElement;
+            if (thisEle.id == 'btn-has') {
+                alert(ctrlCssClass.hasClass(ele, 'typo'));    
+            } else if (thisEle.id == 'btn-add') {
+                ctrlCssClass.addClass(ele, 'a1    a2 a3 a3 typo');
+            } else if (thisEle.id == 'btn-remove') {
+                ctrlCssClass.removeClass(ele, ' a1 a2 a3 r1  r2 typo ');
+            } else if (thisEle.id == 'btn-toggle') {
+                ctrlCssClass.toggleClass(ele, ' t1 t2 t3 typo ');
+            }
+        }
+
+    </script>
+  </body>
+</html>
