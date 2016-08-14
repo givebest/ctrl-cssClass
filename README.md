@@ -10,25 +10,22 @@
 
 ### Browser
 
-	<script src="js/Ctrl-cssClass-compatible.js"></script> 
+	<script src="js/Ctrl-cssClass-compatible.js"></script>
+	ccc.hasClass(ele, 'c1');
+	ccc.addClass(ele, 'c1 c2 c3');
+	ccc.removeClass(ele, 'c1 c2 c3');
+	ccc.toggleClass(ele, 'c1 c2 c3');
+
 
 
 ### Require.js
 
-	require(['Ctrl-cssClass-compatible'], function(ccc){
+	require(['ctrl-cssClass-compatible'], function(ccc){
 		ccc.hasClass(ele, 'c1');
 		ccc.addClass(ele, 'c1 c2 c3');
 		ccc.removeClass(ele, 'c1 c2 c3');
 		ccc.toggleClass(ele, 'c1 c2 c3');	
 	});	
-
-
-### 示例
-
-	ccc.hasClass(ele, 'c1');
-	ccc.addClass(ele, 'c1 c2 c3');
-	ccc.removeClass(ele, 'c1 c2 c3');
-	ccc.toggleClass(ele, 'c1 c2 c3');
 
 
 
