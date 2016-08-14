@@ -263,7 +263,7 @@
 
     // AMD (@see https://github.com/jashkenas/underscore/blob/master/underscore.js)
     if (typeof define == 'function' && define.amd) {
-      define('Ctrl-cssClass-compatible', [], function() {
+      define('ctrl-cssClass-compatible', [], function() {
         return ctrlCssClass;
       });
     }

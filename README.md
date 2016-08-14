@@ -15,7 +15,7 @@
 
 ### Require.js
 
-	require(['Ctrl-cssClass-compatible'], function(ccc){
+	require(['ctrl-cssClass-compatible'], function(ccc){
 		ccc.hasClass(ele, 'c1');
 		ccc.addClass(ele, 'c1 c2 c3');
 		ccc.removeClass(ele, 'c1 c2 c3');
