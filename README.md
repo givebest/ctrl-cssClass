@@ -8,16 +8,27 @@
 
 ## 使用
 
-  
+### Browser
+
 	<script src="js/Ctrl-cssClass-compatible.js"></script> 
+
+
+### Require.js
+
+	require(['Ctrl-cssClass-compatible'], function(ccc){
+		ccc.hasClass(ele, 'c1');
+		ccc.addClass(ele, 'c1 c2 c3');
+		ccc.removeClass(ele, 'c1 c2 c3');
+		ccc.toggleClass(ele, 'c1 c2 c3');	
+	});	
 
 
 ### 示例
 
-	ctrlCssClass.hasClass(ele, 'c1');
-	ctrlCssClass.addClass(ele, 'c1 c2 c3');
-	ctrlCssClass.removeClass(ele, 'c1 c2 c3');
-	ctrlCssClass.toggleClass(ele, 'c1 c2 c3');
+	ccc.hasClass(ele, 'c1');
+	ccc.addClass(ele, 'c1 c2 c3');
+	ccc.removeClass(ele, 'c1 c2 c3');
+	ccc.toggleClass(ele, 'c1 c2 c3');
 
 
 

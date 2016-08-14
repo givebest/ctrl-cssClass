@@ -48,25 +48,25 @@ var ele = document.getElementById('test');
     <h3>hasClass</h3>
 
 <pre>
-ctrlCssClass.hasClass(ele,'c1');
+ccc.hasClass(ele,'c1');
 </pre>
 
     <h3>addClass</h3>
 
 <pre>
-ctrlCssClass.addClass(ele,'c1 c2 c3');
+ccc.addClass(ele,'c1 c2 c3');
 </pre>   
 
     <h3>removeClass</h3>
 
 <pre>
-ctrlCssClass.removeClass(ele,'c1 c2 c3');
+ccc.removeClass(ele,'c1 c2 c3');
 </pre> 
 
     <h3>toggleClass</h3>
 
 <pre>
-ctrlCssClass.toggleClass(ele,'c1 c2 c3');
+ccc.toggleClass(ele,'c1 c2 c3');
 </pre>     
 
 
@@ -85,30 +85,30 @@ ctrlCssClass.toggleClass(ele,'c1 c2 c3');
 		<a href="https://github.com/givebest/Ctrl-cssClass">Fork me on Github</a>
 	</div>
 	
-	<script src="js/Ctrl-cssClass-compatible.js"></script>
-    <script>
-        var ele = document.getElementById('wrapper');
-        var btnHas = document.getElementById('btn-has');
-        var btnAdd = document.getElementById('btn-add');
-        var btnRemove = document.getElementById('btn-remove');
-        var btnToggle = document.getElementById('btn-toggle');
-
-
-        document.onclick = function(e) {
-            // https://developer.mozilla.org/en-US/docs/Web/API/Event/target
-            e = e || window.event;
-            var thisEle = e.srcElement;
-            if (thisEle.id == 'btn-has') {
-                alert(ctrlCssClass.hasClass(ele, 'typo'));    
-            } else if (thisEle.id == 'btn-add') {
-                ctrlCssClass.addClass(ele, 'a1    a2 a3 a3 typo');
-            } else if (thisEle.id == 'btn-remove') {
-                ctrlCssClass.removeClass(ele, ' a1 a2 a3 r1  r2 typo ');
-            } else if (thisEle.id == 'btn-toggle') {
-                ctrlCssClass.toggleClass(ele, ' t1 t2 t3 typo ');
+    <script src="js/Ctrl-cssClass-compatible.js"></script>
+        <script>
+            var ele = document.getElementById('wrapper');
+            var btnHas = document.getElementById('btn-has');
+            var btnAdd = document.getElementById('btn-add');
+            var btnRemove = document.getElementById('btn-remove');
+            var btnToggle = document.getElementById('btn-toggle');
+    
+    
+            document.onclick = function(e) {
+                // https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+                e = e || window.event;
+                var thisEle = e.srcElement;
+                if (thisEle.id == 'btn-has') {
+                    alert(ccc.hasClass(ele, 'typo'));    
+                } else if (thisEle.id == 'btn-add') {
+                    ccc.addClass(ele, 'a1    a2 a3 a3 typo');
+                } else if (thisEle.id == 'btn-remove') {
+                    ccc.removeClass(ele, ' a1 a2 a3 r1  r2 typo ');
+                } else if (thisEle.id == 'btn-toggle') {
+                    ccc.toggleClass(ele, ' t1 t2 t3 typo ');
+                }
             }
-        }
-
-    </script>
+    
+        </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-var ctrlCssClass = (function() {
+(function() {
 
 
   // @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
@@ -229,15 +229,43 @@ var ctrlCssClass = (function() {
             }
           });
          }
-
-
     }
 
-     return {
+/*    var ctrlCssClass = {
+        hasClass: function(ele, c) {
+          return hasClass(ele, c);
+        },
+        addClass: function(ele, c) {
+          addClass(ele, c);
+        },
+        removeClass: function(ele, c){
+          removeClass(ele, c);
+        },
+        toggleClass: function(ele, c){
+          toggleClass(ele, c);
+        }
+    };
+    window.ctrlCssClass = ctrlCssClass;*/
+
+    function CtrlCssClass(){
+      return {
         hasClass: hasClass,
         addClass: addClass,
         removeClass: removeClass,
         toggleClass: toggleClass
-     }
+      }
+    }
+    window.ctrlCssClass = new CtrlCssClass();
 
-})();
+
+    // (@see https://github.com/madrobby/zepto/blob/master/src/zepto.js)
+    window.ccc === undefined && (window.ccc = ctrlCssClass);
+
+    // AMD (@see https://github.com/jashkenas/underscore/blob/master/underscore.js)
+    if (typeof define == 'function' && define.amd) {
+      define('Ctrl-cssClass-compatible', [], function() {
+        return ctrlCssClass;
+      });
+    }
+
+}());
