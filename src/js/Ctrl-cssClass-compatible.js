@@ -255,8 +255,8 @@
         toggleClass: toggleClass
       }
     }
-    window.ctrlCssClass = new CtrlCssClass();
-
+    
+    window.ctrlCssClass = window.ctrlCssClass || new CtrlCssClass();
 
     // (@see https://github.com/madrobby/zepto/blob/master/src/zepto.js)
     window.ccc === undefined && (window.ccc = ctrlCssClass);
