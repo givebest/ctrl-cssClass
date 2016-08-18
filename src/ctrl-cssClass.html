@@ -97,7 +97,7 @@ ccc.toggleClass(ele,'c1 c2 c3');
             document.onclick = function(e) {
                 // https://developer.mozilla.org/en-US/docs/Web/API/Event/target
                 e = e || window.event;
-                var thisEle = e.srcElement;
+                var thisEle = e.target || e.srcElement;
                 if (thisEle.id == 'btn-has') {
                     alert(ccc.hasClass(ele, 'typo'));    
                 } else if (thisEle.id == 'btn-add') {
