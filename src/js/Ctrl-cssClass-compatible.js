@@ -1,8 +1,7 @@
 (function() {
 
 
-  // @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
-  // Polyfill
+  // Polyfill (indexOf @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
   if (!Array.prototype.indexOf) {
     Array.prototype.indexOf = function(searchElement, fromIndex) {
 
@@ -76,7 +75,7 @@
                 ele: ele,
                 c: c,
                 fun: function(opts) {
-                    return opts.c.some(function(v) {
+                    return opts.c.every(function(v) {
                         return !!opts.ele.classList.contains(v);
                     });
                 }
